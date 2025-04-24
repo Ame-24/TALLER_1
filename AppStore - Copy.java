@@ -10,17 +10,17 @@ public class AppStore
     // -----------------------------------------------------------------
 
     /**
-     * Representa la cantidad mínima de licencias de juegos de rompecabezas para la primera opción de descuento.
+     * Representa la cantidad mï¿½nima de licencias de juegos de rompecabezas para la primera opciï¿½n de descuento.
      */
     public final static int CANT_MIN_ROMPECABEZAS = 25;
 
     /**
-     * Representa la cantidad mínima de licencias de juegos de deporte para la segunda opción de descuento.
+     * Representa la cantidad mï¿½nima de licencias de juegos de deporte para la segunda opciï¿½n de descuento.
      */
     public final static int CANT_MIN_DEPORTE = 20;
 
     /**
-     * Representa la cantidad mínima de licencias de juegos de acción para la segunda opción de descuento.
+     * Representa la cantidad mï¿½nima de licencias de juegos de acciï¿½n para la segunda opciï¿½n de descuento.
      */
     public final static int CANT_MIN_ACCION = 12;
 
@@ -65,21 +65,21 @@ public class AppStore
     /**
      * Crea la AppStore con sus 4 juegos. <br>
      * <b>post: </b> Los juegos fueron inicializados con los siguientes valores: <br>
-     * Juego1 - Nombre: Candy Crush, Categoría: Rompecabezas, Precio: 3000, Tamaño (en KB): 300, Cantidad de licencias: 50. <br>
-     * Juego2 - Nombre: Flow, Categoría: Rompecabezas, Precio: 5500, Tamaño (en KB): 250, Cantidad de licencias: 15 <br>
-     * Juego3 - Nombre: FIFA, Categoría: Deporte, Precio: 7500, Tamaño (en KB): 850, Cantidad de licencias: 80 <br>
-     * Juego4 - Nombre: Clash of Clans, Categoría: Acción, Precio: 2000, Tamaño (en KB): 1000, Cantidad de licencias: 36 <br>
+     * Juego1 - Nombre: Candy Crush, Categorï¿½a: Rompecabezas, Precio: 3000, Tamaï¿½o (en KB): 300, Cantidad de licencias: 50. <br>
+     * Juego2 - Nombre: Flow, Categorï¿½a: Rompecabezas, Precio: 5500, Tamaï¿½o (en KB): 250, Cantidad de licencias: 15 <br>
+     * Juego3 - Nombre: FIFA, Categorï¿½a: Deporte, Precio: 7500, Tamaï¿½o (en KB): 850, Cantidad de licencias: 80 <br>
+     * Juego4 - Nombre: Clash of Clans, Categorï¿½a: Acciï¿½n, Precio: 2000, Tamaï¿½o (en KB): 1000, Cantidad de licencias: 36 <br>
      */
     public AppStore( )
     {
-        juego1 = new Juego( "Candy Crush", Categoria.ROMPECABEZAS, 3000, 300, 50 );
-        juego2 = new Juego( "Flow", Categoria.ROMPECABEZAS, 5500, 250, 15 );
-        juego3 = new Juego( "FIFA", Categoria.DEPORTE, 7500, 850, 80 );
-        juego4 = new Juego( "Clash of Clans", Categoria.ACCION, 2000, 1000, 36 );
+        juego1 = new Juego( "Candy Crush", Juego.Categoria.ROMPECABEZAS, 3000, 300, 50 );
+        juego2 = new Juego( "Flow", Juego.Categoria.ROMPECABEZAS, 5500, 250, 15 );
+        juego3 = new Juego( "FIFA", Juego.Categoria.DEPORTE, 7500, 850, 80 );
+        juego4 = new Juego( "Clash of Clans", Juego.Categoria.ACCION, 2000, 1000, 36 );
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
@@ -148,11 +148,11 @@ public class AppStore
 
     /**
      * Registra la venta de licencias de un juego dado su nombre. <br>
-     * <b>post: </b> Aumentó la cantidad de licencias vendidas del juego. <br>
-     * Si la cantidad de juegos a vender era mayor que la cantidad de existencias del juego, la venta no se realizó.
+     * <b>post: </b> Aumentï¿½ la cantidad de licencias vendidas del juego. <br>
+     * Si la cantidad de juegos a vender era mayor que la cantidad de existencias del juego, la venta no se realizï¿½.
      * @param pNombreJuego Nombre del juego a vender. pNombreJuego != null && pNombreJuego != "".
      * @param pCantidad Cantidad de licencias que se van a vender. pCantidad > 0.
-     * @return Retorna true si logró realizar la venta, false de lo contrario.
+     * @return Retorna true si logrï¿½ realizar la venta, false de lo contrario.
      */
     public boolean venderLicenciasJuego( String pNombreJuego, int pCantidad )
     {
@@ -166,7 +166,7 @@ public class AppStore
 
     /**
      * Registra la compra de licencias de un juego dado su nombre. <br>
-     * <b>post: </b> Aumentó la cantidad de licencias del juego.
+     * <b>post: </b> Aumentï¿½ la cantidad de licencias del juego.
      * @param pNombreJuego Nombre del juego a comprar. pNombreJuego != null && pNombreJuego != "".
      * @param pCantidad Cantidad de licencias que se van a comprar. pCantidad > 0.
      */
@@ -179,10 +179,10 @@ public class AppStore
     }
 
     /**
-     * Retorna el nombre del juego con más unidades vendidas. <br>
+     * Retorna el nombre del juego con mï¿½s unidades vendidas. <br>
      * En caso de que se haya vendido la misma cantidad de licencias para varios juegos y esta sea la mayor cantidad, se retorna el nombre del primero <br>
-     * de los juegos que cumpla con la condición.
-     * @return Nombre del juego que ha vendido una mayor cantidad de licencias o "Ninguno" en caso en el que ningún juego haya vendido licencias.
+     * de los juegos que cumpla con la condiciï¿½n.
+     * @return Nombre del juego que ha vendido una mayor cantidad de licencias o "Ninguno" en caso en el que ningï¿½n juego haya vendido licencias.
      */
     public String darJuegoMasVendido( )
     {
@@ -214,9 +214,9 @@ public class AppStore
 
     /**
      * Retorna una cadena de texto con el descuento por ventas de juegos en volumen teniendo en cuenta las siguientes reglas: <br>
-     * - Si se quieren comprar mínimo 25 licencias de juegos de rompecabezas se dará un descuento del 20% sobre el valor total. <br>
-     * - Si se quieren comprar al menos 20 licencias de juegos de deportes y 12 licencias de juegos de acción se dará un descuento del 15% sobre el valor total. <br>
-     * Cuando en una venta se cumplen las dos condiciones anteriores, sólo se aplica el primer descuento.
+     * - Si se quieren comprar mï¿½nimo 25 licencias de juegos de rompecabezas se darï¿½ un descuento del 20% sobre el valor total. <br>
+     * - Si se quieren comprar al menos 20 licencias de juegos de deportes y 12 licencias de juegos de acciï¿½n se darï¿½ un descuento del 15% sobre el valor total. <br>
+     * Cuando en una venta se cumplen las dos condiciones anteriores, sï¿½lo se aplica el primer descuento.
      * @param pCantidadLicenciasJuego1 Cantidad de licencias que se pretenden vender del juego1.
      * @param pCantidadLicenciasJuego2 Cantidad de licencias que se pretenden vender del juego2.
      * @param pCantidadLicenciasJuego3 Cantidad de licencias que se pretenden vender del juego3.
@@ -320,18 +320,18 @@ public class AppStore
 
         double totalConDescuento = totalVenta - descuento;
 
-        String mensaje = "El precio total de la venta sería: $" + totalVenta + ".\n" + "El descuento sería de: $" + descuento + "\n" + "El precio con descuento sería: $" + totalConDescuento + ".";
+        String mensaje = "El precio total de la venta serï¿½a: $" + totalVenta + ".\n" + "El descuento serï¿½a de: $" + descuento + "\n" + "El precio con descuento serï¿½a: $" + totalConDescuento + ".";
 
         return mensaje;
 
     }
 
     // -----------------------------------------------------------------
-    // Puntos de Extensión
+    // Puntos de Extensiï¿½n
     // -----------------------------------------------------------------
 
     /**
-     * Método para la extensión 1.
+     * Mï¿½todo para la extensiï¿½n 1.
      * @return Respuesta 1.
      */
     public String metodo1( )
@@ -340,7 +340,7 @@ public class AppStore
     }
 
     /**
-     * Método para la extensión 2.
+     * Mï¿½todo para la extensiï¿½n 2.
      * @return Respuesta 2.
      */
     public String metodo2( )
