@@ -11,22 +11,22 @@ public class Juego
     // -----------------------------------------------------------------
 
     /**
-     * Enumeradores para la categoría del juego.
+     * Enumeradores para la categorï¿½a del juego.
      */
     public enum Categoria
     {
         /**
-         * Representa la categoría rompecabezas.
+         * Representa la categorï¿½a rompecabezas.
          */
         ROMPECABEZAS,
 
         /**
-         * Representa la categoría deportes.
+         * Representa la categorï¿½a deportes.
          */
         DEPORTE,
 
         /**
-         * Representa la categoría acción.
+         * Representa la categorï¿½a acciï¿½n.
          */
         ACCION
     }
@@ -41,7 +41,7 @@ public class Juego
     private String nombre;
 
     /**
-     * Categoría del juego.
+     * Categorï¿½a del juego.
      */
     private Categoria categoria;
 
@@ -51,7 +51,7 @@ public class Juego
     private int precio;
 
     /**
-     * Tamaño en KB del juego.
+     * Tamaï¿½o en KB del juego.
      */
     private int tamanio;
 
@@ -65,20 +65,20 @@ public class Juego
      */
     private int cantidadVendidas;
 
-    
+
 
     // -----------------------------------------------------------------
     // Constructores
     // -----------------------------------------------------------------
 
     /**
-     * Construye un nuevo juego con los valores dados por parámetro. <br>
-     * <b>post: </b> El nombre, la categoría, el precio, el tamaño, la cantidad de licencias y la ruta de la imagen fueron inicializados <br>
-     * con los valores dados por parámetro. La cantidad de licencias vendidas fue inicializada en 0.
+     * Construye un nuevo juego con los valores dados por parï¿½metro. <br>
+     * <b>post: </b> El nombre, la categorï¿½a, el precio, el tamaï¿½o, la cantidad de licencias y la ruta de la imagen fueron inicializados <br>
+     * con los valores dados por parï¿½metro. La cantidad de licencias vendidas fue inicializada en 0.
      * @param pNombre Nombre del juego. pNombre != null && pNombre != "".
-     * @param pCategoria Categoría del juego. pCategoria == ROMPECABEZAS || pCategoria == DEPORTE || pCategoria == ACCION.
+     * @param pCategoria Categorï¿½a del juego. pCategoria == ROMPECABEZAS || pCategoria == DEPORTE || pCategoria == ACCION.
      * @param pPrecio Precio que tiene el juego. pPrecio > 0.
-     * @param pTamanio Tamaño en KB del juego. pTamanio > 0.
+     * @param pTamanio Tamaï¿½o en KB del juego. pTamanio > 0.
      * @param pCantidadLicencias Cantidad de licencias de juego disponibles. pCantidadLicencias >= 0.
 
      */
@@ -93,7 +93,7 @@ public class Juego
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
@@ -106,8 +106,8 @@ public class Juego
     }
 
     /**
-     * Retorna la categoría del juego.
-     * @return Categoría del juego.
+     * Retorna la categorï¿½a del juego.
+     * @return Categorï¿½a del juego.
      */
     public Categoria darCategoria( )
     {
@@ -124,8 +124,8 @@ public class Juego
     }
 
     /**
-     * Retorna el tamaño en KB del Juego.
-     * @return Tamaño en KB del Juego.
+     * Retorna el tamaï¿½o en KB del Juego.
+     * @return Tamaï¿½o en KB del Juego.
      */
     public int darTamanio( )
     {
@@ -150,11 +150,11 @@ public class Juego
         return cantidadVendidas;
     }
 
-    
+
 
     /**
      * Compra una cantidad dada de licencias. <br>
-     * <b>post: </b> Se aumentó la cantidad actual de licencias del juego en la cantidad dada.
+     * <b>post: </b> Se aumentï¿½ la cantidad actual de licencias del juego en la cantidad dada.
      * @param pCantidad Cantidad de licencias que se quieren comprar. pCantidad > 0.
      */
     public void comprarLicencias( int pCantidad )
@@ -164,8 +164,8 @@ public class Juego
 
     /**
      * Vende una cantidad dada de licencias, si cuenta con la cantidad suficiente. <br>
-     * <b>post: </b> Disminuyó la cantidad actual de licencias del juego. <br>
-     * Aumentó la cantidad de licencias vendidas.
+     * <b>post: </b> Disminuyï¿½ la cantidad actual de licencias del juego. <br>
+     * Aumentï¿½ la cantidad de licencias vendidas.
      * @param pCantidad Cantidad de licencias que se quieren vender. pCantidad > 0.
      * @return Retorna true si logra realizar la venta, false de lo contrario.
      */
